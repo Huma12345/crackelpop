@@ -1,0 +1,122 @@
+<!doctype html>
+<html>
+    <head>
+        <style type="text/css">
+            body {
+              background: GhostWhite;
+              font-family: Helvetica, Arial, sans-serif;
+            }
+
+            div {
+              max-width: 700px;
+              margin: 0 auto 50px;
+              padding: 5px 8px;
+              overflow: auto;
+            }
+
+            ul {
+              list-style: none;
+              margin: 0 auto;
+              padding: 0;
+            }
+
+            li {
+              display: inline;
+              float: left;
+              padding: 12px;
+              margin: 10px;
+              /*  size  */
+              width: 130px;
+              height: 60px;
+              /*  text align  */
+              line-height: 4;
+              text-align: center;
+              vertical-align: middle;
+              /*  button styling  */
+              border-radius: 7px;
+              box-shadow: 2px 2px 2px #ccc;
+              -moz-box-shadow: 2px 2px 2px #ccc;
+              -webkit-box-shadow: 2px 2px 2px #ccc;
+              -o-box-shadow: 2px 2px 2px #ccc;
+            }
+
+            .red {
+              background: #20b2aa;
+              border-bottom: 6px solid #14716c;
+              color: black;
+              letter-spacing: 1px;
+            }
+
+            .red:hover {
+              background: #14716c;
+              border-bottom: 6px solid #20b2aa;
+            }
+
+            .green {
+              background: #b22071;
+              border-bottom: 6px solid #711448;
+            }
+
+            .green:hover {
+              background: #711448;
+              border-bottom: 6px solid #b22071;
+            }
+
+            .pink {
+              background: lightgrey;
+              border-bottom: 6px solid grey;
+            }
+
+            .pink:hover {
+              background: grey;
+              border-bottom: 6px solid darkgrey;
+            }
+
+            .blue {
+              background: DodgerBlue;
+              border-bottom: 6px solid LightSkyBlue;
+            }
+
+            .blue:hover {
+              background: LightSkyBlue;
+              border-bottom: 6px solid DodgerBlue;
+            }
+        </style>
+    </head>
+    <body>
+        <!--[if lte IE 9]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+        <![endif]-->
+
+        <!-- Add your site or application content here -->
+        
+        <div>
+            <h1>Code CracklePop</h1>
+            <ul>
+              
+            </ul>
+        </div>
+
+        <script src="js/jquery-3.2.1.slim.min.js" type="text/javascript"></script>
+        <script type="text/javascript">
+                $(document).ready(function() {
+                    for (var i = 1; i <= 100; i++) {
+                        if ((i % 3) === 0 && (i % 5) === 0 ) {
+                            $('div ul').append('<li class="red">' + 'CracklePop' + '</li>');
+                            // console.log('CracklePop');
+                        } else if ((i % 5) == 0) {
+                            $('div ul').append('<li class="green">' + 'Pop' + '</li>');
+                            // console.log('Pop');
+                        } else if ((i % 3) == 0) {
+                            $('div ul').append('<li class="pink">' + 'Crackle' + '</li>');
+                            console.log('Crackle');
+                        } else {
+                            $('div ul').append('<li class="blue">' + i + '</li>');
+                            // console.log(i);
+                        }
+                        console.log('we are in business');
+                    }
+                });
+        </script>        
+    </body>
+</html>
